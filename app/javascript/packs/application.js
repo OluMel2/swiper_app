@@ -7,9 +7,30 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import 'jquery'
 import "script.js"
+import Swiper from 'swiper/swiper-bundle.js';
+import 'swiper/swiper-bundle.css';
 //ファイルをimport
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+
+// Swiperのオプションを定数化
+const opt = {
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+}
+
+// Swiperを実行(初期化)
+$(document).on('turbolinks:load', function() {
+    let swiper = new Swiper('.swiper',opt);
+});
