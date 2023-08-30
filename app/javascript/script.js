@@ -7,7 +7,8 @@ $(document).ready(function () {
   });
 });
 
-// Swiperのオプションを定数化
+//Swiperのオプションを定数化
+//swiperを実行して画像をスライドさせるため
 const opt = {
   loop: true,
   pagination: {
